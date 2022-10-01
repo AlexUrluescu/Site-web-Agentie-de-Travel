@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+/* -------------- MENU DISPOZITIVE MOBILE ------------------ */
+
+.header{
+    background-color: rgb(0, 145, 133);
+    height: 60px;
+    padding: 10px 20px;
+
+    /* position: relative; */
+    position: fixed;
+    width: 100%;
+
+    z-index: 100;
+    top: 0;
+    right: 0;
+
+}
+
+#btn-menu--intrare{
+    font-size: 30px;
+    color: white;
+
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+#btn-menu--iesire{
+    font-size: 30px;
+    color: white;
+
+    position: absolute;
+    top: 15px;
+    right: 25px;
+
+    display: none;
+}
+
+.navigatie{
+    background-color: rgb(0, 99, 142);
+    width: 300px;
+    height: 100%;
+    border-right: 2px solid white;
+
+    position: fixed;
+    top: 60px;
+    left: -300px;
+
+    transition: all .4s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    z-index: 200;
+}
+
+.menu{
+    /* background-color: gray; */
+    color: white;
+    margin-top: 30px;
+    padding: 10px;
+    width: 100%;
+}
+
+/* .casuta-logo{
+    background-color: beige;
+} */
+
+.continut-menu{
+    /* background-color: aqua; */
+    margin-top: 30px;
+}
+
+.elemente{
+    padding: 25px 25px;
+    font-size: 22px;
+    /* background-color: aqua; */
+
+    display: flex;
+    align-items: center;
+}
+
+.casuta-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.butoane{
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+#locatie{
+    color: gold;
+}
+
+
+/* ---------------- FINAL MENU DISPOZITIVE MOBILE ----------- */
+
+
+/* -------------------- MENU LAPTOP -------------------------- */
+
+@media screen and (min-width:760px) {
+    .header{
+        display: none;
+    }
+
+    .navigatie{
+        background-color: rgb(0, 145, 133);
+        width: 100%;
+        height: 80px;
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        z-index: 100;
+    }
+
+  
+    .menu{
+        /* background-color: red; */
+        height: 80px;
+        margin: 0;
+        padding: 10px 0px;
+
+        display: flex;
+    }
+
+    .casuta-logo{
+        width: 30%;
+        color: black;
+        /* background-color: green; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .casuta-logo img{
+        width: 170px;
+        height: 80%;
+    }
+
+    .continut-menu{
+        height: 100%;
+        width: 70%;
+        color: white;
+        margin-top: 0;
+        margin-right: 20px;
+        padding: 10px;
+
+        display: flex;
+        gap: 30px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .elemente{
+        height: 100%;
+        font-size: 20px;
+        cursor: pointer;
+        /* background-color: gray; */
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    .elemente::after{
+        content: '';
+        display: block;
+        background-color: gold;
+        width: 100%;
+        height: 5px;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        transform: translateX(-101%);
+        transition: all .3s;
+    }
+
+    .elemente:hover.elemente::after{
+        transform: translateX(0%);
+    }
+
+    .butoane{
+        font-size: 20px;
+        margin-right: 20px;
+    }
+}
+
+
+@media screen and (max-width:1300px) {
+    .casuta-logo{
+        display: none;
+    
+    }
+
+    .continut-menu{
+        width: 100%;
+        justify-content: center;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .casuta-logo{
+        display: block;
+    }
+}
+
+/* ----------------- FINAL MENU LAPTOP ---------------------- */
+
+/* ------------- CONTENEDOR 1 ---------------------- */
+
+.contenedor1{
+    /* background-color: red; */
+    margin-top: 80px;
+}
+
+.contenedor-all1{
+    /* background-color: beige; */
+    padding: 60px 0px;
+}
+
+.contenedor-adaptare1{
+    /* background-color: greenyellow; */
+
+    display: flex;
+}
+
+.contenedor1-text{
+    /* background-color: red; */
+    width: 40%;
+    padding: 20px 50px;
+}
+
+#titlu1{
+    margin-top: 30px;
+    font-size: 60px;
+    color: rgb(0, 99, 142);
+}
+
+.contenedor1-text h1{
+    font-size: 45px;
+    margin-top: -5px;
+    color: gold;
+
+}
+
+.contenedor1-text p{
+    margin-top: 70px;
+    font-weight: 500;
+}
+
+.contenedor1-text input{
+    margin-top: 140px;
+    border: none;
+    background-color: gold;
+    padding: 8px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+
+    transition: all .3s;
+}
+
+.contenedor1-text input:hover{
+    background-color: rgb(0, 99, 142);
+    color: white;
+}
+
+.contenedor1-poze{
+    /* background-color: aqua; */
+    width: 60%;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.casuta-btn1-stanga{
+    /* background-color: gold; */
+    position: absolute;
+    top: 0;
+    left: 20px;
+
+    height: 100%;
+    font-size: 40px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.casuta-btn1-dreapta{
+    /* background-color: gold; */
+    position: absolute;
+    top: 0;
+    right: 20px;
+    
+    height: 100%;
+    font-size: 40px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.poze-all1{
+    display: flex;
+    width: 400%;
+    margin-left: -100%;
+}
+
+.casuta1-poza{
+    /* background-color: green; */
+    width: 100%;
+    text-align: center;
+}
+
+.casuta1-poza img{
+   height: 550px;
+   width: 100%;
+}
+
+/* ---- media queries ------ */
+
+@media screen and (max-width:1231px) {
+    .contenedor1-text input{
+        margin-top: 90px;
+       
+    }
+}
+
+@media screen and (max-width:900px) {
+    .contenedor-adaptare1{
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .contenedor1-text{
+        width: 100%;
+        padding: 20px 40px;
+        text-align: center;
+    }
+
+    .contenedor1-poze{
+        /* background-color: aqua; */
+        width: 100%;
+    
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contenedor1{
+        /* background-color: red; */
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:520px){
+    .casuta1-poza img{
+        height: 400px;
+        width: 100%;
+     }
+}
+
+@media screen and (max-width:380px) {
+    .casuta1-poza img{
+        height: 350px;
+        width: 100%;
+     }
+     .casuta-btn1-stanga, .casuta-btn1-dreapta{
+        font-size: 30px;
+       
+    }
+}
+
+/* ----- final media queries ------- */
+
+/* ------------------- FINAL CONTENEDOR 1 ---------------- */
+
+/* ------------------ CONTENEDOR 2 ------------------- */
+
+.contenedor2{
+    background-color: green;
+}
+
+.contenedor-all2{
+    background-color: beige;
+    padding: 50px 20px;
+}
+
+.contenedor-adaptare2{
+    background-color: aqua;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+}
+
+.contenedor2-casuta{
+    background-color: red;
+    /* width: 200px; */
+    height: 300px;
+    margin: 0px 30px;
+
+    display: flex;
+}
+
+.casuta2-text{
+    background-color: gold;
+    width: 230px;
+}
+
+.casuta2-text-poza{
+    background-color: greenyellow;
+    height: 70%;
+}
+
+.casuta2-text-buton{
+    background-color: red;
+    height: 30%;
+    padding: 10px;
+}
+
+.casuta2-text-buton h3{
+    margin-left: 10px;
+}
+
+.casuta2-text-buton input{
+    background-color: azure;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.casuta2-move{
+    background-color: orange;
+    width: 0;
+    
+    overflow: hidden;
+    transition: all .3s;
+}
+
+
+
+/* -------------- clase JS ------------------ */
+
+.navigatie--aparitie{
+    left: 0;
+}
+
+.casuta-move--aparitie{
+    width: 200px;
+    padding: 10px;
+}
