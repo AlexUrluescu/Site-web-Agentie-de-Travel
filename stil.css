@@ -11,6 +11,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
 /* -------------- MENU DISPOZITIVE MOBILE ------------------ */
 
 .header{

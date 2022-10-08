@@ -15,6 +15,11 @@ body{
     background-color: aliceblue;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
 /* -------------- MENU DISPOZITIVE MOBILE ------------------ */
 
 .header{
@@ -416,27 +421,78 @@ body{
 /* ------------------ CONTENEDOR 2 ------------------- */
 
 .contenedor2{
-    background-color: green;
+    /* background-color: green; */
+    padding: 30px 0;
 }
 
 .contenedor-all2{
-    background-color: beige;
-    padding: 50px 20px;
+    /* background-color: rgb(121, 174, 197); */
+    padding: 80px 20px;
+   
 }
 
 .contenedor-adaptare2{
-    background-color: aqua;
-    max-width: 1200px;
+    /* background-color: aliceblue; */
+    border-radius: 20px;
+    max-width: 1400px;
     margin: auto;
 
-    display: flex;
+    position: relative;
+    overflow: hidden;
+
 }
+
+.contenedor2-buton-stanga{
+    position: absolute;
+    top: 0;
+    left: 20px;
+
+    /* background-color: red; */
+    height: 100%;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(0, 99, 142);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedor2-buton-dreapta{
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    /* background-color: red; */
+    height: 100%;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(0, 99, 142);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .contenedor2-all-casute{
+    background-color: red;
+} */
+
+.casuta-all{
+    /* background-color: greenyellow; */
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 .contenedor2-casuta{
     background-color: red;
     /* width: 200px; */
     height: 300px;
-    margin: 0px 30px;
+    margin: 20px 50px;
+    border-radius: 13px;
+    overflow: hidden;
 
     display: flex;
 }
@@ -447,14 +503,23 @@ body{
 }
 
 .casuta2-text-poza{
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     height: 70%;
 }
 
+.casuta2-text-poza img{
+    width: 100%;
+    height: 100%;
+}
+
 .casuta2-text-buton{
-    background-color: red;
+    background-color: rgb(0, 145, 133);
     height: 30%;
     padding: 10px;
+    color: white;
+
+    position: relative;
+    /* z-index: 2; */
 }
 
 .casuta2-text-buton h3{
@@ -462,25 +527,416 @@ body{
 }
 
 .casuta2-text-buton input{
-    background-color: azure;
+    background-color: gold;
     border: none;
     border-radius: 20px;
     width: 100px;
     height: 30px;
     cursor: pointer;
     margin-top: 10px;
+    color: black;
+    font-weight: 600;
 
 }
 
 .casuta2-move{
     background-color: orange;
-    width: 0;
+    width: 0px;
     
+    overflow: hidden;
+    transition: all .3s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.casutaMovePret{
+    background-color: rgb(0, 145, 133);
+    height: 30%;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.casutaMoveDescriere{
+    background-color: white;
+    padding: 20px;
+    height: 70%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.contenedor2-all-casute{
+    /* background-color: purple; */
+    width: 300%;
+    display: flex;
+
+    margin-left: -100%;
+}
+
+.casuta-all{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+}
+
+/* ------- media queries ------- */
+
+@media screen and (max-width:1200px) {
+    .contenedor2-casuta{
+        position: relative;
+    }
+
+    .casuta2-move{
+        position: absolute;
+        bottom: 90px;
+        right:0;
+
+        width: 100%;
+        height: 0px;
+    }
+
+    .casutaMoveDescriere p{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width:420px) {
+    .contenedor2-buton-stanga, .contenedor2-buton-dreapta{
+        font-size: 2px;
+    }
+}
+
+/* ------- final media queries --------- */
+
+/* ------------------ FINAL CONTENEDOR 2 -------------------- */
+
+/* ----------------- CONTENEDOR 3 --------------------------- */
+
+/* .contenedor3{
+    background-color: red;
+} */
+
+.contenedor-all3{
+    background-color:rgb(0, 99, 142);
+    padding: 50px 20px;
+}
+
+.contenedor-adaptare3{
+    /* background-color: aqua; */
+    max-width: 1400px;
+    margin: auto;
+
+    display: flex;
+    gap: 30px;
+}
+
+.contenedor3Text{
+    /* background-color: pink; */
+    color: white;
+    padding:20px 20px 0px 20px;
+    width: 60%;
+}
+
+.contenedor3Text{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.contenedor3Text i{
+    margin-right: 20px;
+}
+
+.contenedor3Text-casute{
+    /* background-color: purple; */
+    margin-top: 30px;
+    padding: 20px 0px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contenedor3-casuta{
+    background-color: aliceblue;
+    width: 160px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+
     overflow: hidden;
     transition: all .3s;
 }
 
+.contenedor3-casuta:hover{
+    transform: scale(1.05);
+}
 
+.contenedor3-casuta-poza{
+    background-color: red;
+    height: 150px;
+}
+
+.contenedor3-casuta-poza img{
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor3-casuta-text{
+    background-color: rgb(0, 145, 133);
+    font-size: 18px;
+    height: 50px;
+    padding: 0px 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.contenedor3Poze{
+    background-color: gold;
+    width: 40%;
+
+
+    overflow: hidden;
+}
+
+.contenedor-all3-poze{
+    background-color: red;
+    height: 100%;
+    width: 400%;
+    margin-left: -100%;
+
+    display: flex;
+}
+
+.casuta3-poza{
+    /* background-color: greenyellow; */
+    width: 100%;
+}
+
+.casuta3-poza img{
+    width: 100%;
+    height: 100%;
+  
+}
+
+.contenedor3Move{
+    background-color: aliceblue;
+    padding: 0px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.casuta3Move{
+    /* background-color: purple; */
+    max-width: 1400px;
+    margin: auto;
+    color: white;
+    padding: 10px;
+
+    display: none;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.casuta3Move i{
+    font-size: 26px;
+    cursor: pointer;
+    color: gold;
+
+}
+
+.casuta3MoveInfo{
+    /* background-color: blue; */
+    display: none;
+    color: black;
+    padding: 20px 0px;
+}
+
+/* ------------------------------------------ */
+
+/* --------------- SECTION 5 CONTINUT ---------------- */
+
+.contenedor5{
+    background-color: aliceblue;
+}
+
+.contenedor-all5{
+    /* background-color: beige; */
+    padding: 60px 20px;
+}
+
+.contenedor-adaptare5{
+    /* background-color: aquamarine; */
+    max-width: 700px;
+    margin: auto;
+
+    display: flex;
+}
+
+.social-media{
+    /* background-color: pink; */
+    width: 50%;
+    padding: 20px;
+}
+
+.social-media ul{
+    list-style: none;
+    margin-top: 20px;
+    /* background-color: red; */
+}
+
+.social-media ul li{
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(88, 88, 88);
+
+    transition: all .3s;
+}
+
+.social-media ul li:hover{
+    color: black;
+}
+
+.social-icon{
+    margin-right: 10px;
+}
+
+.contact{
+    /* background-color: green; */
+    width: 50%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contact h2{
+    margin-right: 40px;
+}
+
+.contact ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.contact ul li{
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(88, 88, 88);
+
+    transition: all .3s;
+}
+
+.contact ul li:hover{
+    color: black;
+}
+
+
+/* ----- media queries ----- */
+
+@media screen and (max-width:600px) {
+    .social-media ul li, .contact ul li{
+        font-size: 15px;
+    }
+
+    .contact h2{
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width:450px){
+    .social-media h2, .contact h2{
+        font-size: 20px;
+    }
+
+    /* .contenedor3Poze{
+        height: 300px;
+    } */
+}
+
+@media screen and (max-width:380px) {
+    .contenedor-adaptare5{
+    
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-media, .contact{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .social-media h2{
+        text-align: center;
+    }
+
+    .social-media ul{
+        /* background-color: red; */
+        width: 110px;
+
+    }
+}
+
+/* --------------- FINAL SECTION 5 CONTINUT ---------------- */
+/* --------------- FINAL SECTION 5 CONTINUT ---------------- */
+
+footer{
+    /* background-color: red; */
+    text-align: center;
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+
+/* ---- media queries -------- */
+
+@media screen and (max-width:1100px){
+    .contenedor3-casuta{
+       width: 140px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .contenedor-adaptare3{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .contenedor3Text{
+        width: 100%;
+    }
+
+    .contenedor3Poze{
+        width: 100%;
+        height: 400px;
+    }
+
+    .contenedor3-casuta{
+        width: 180px;
+     }
+}
 
 /* -------------- clase JS ------------------ */
 
@@ -489,6 +945,29 @@ body{
 }
 
 .casuta-move--aparitie{
-    width: 200px;
-    padding: 10px;
+    width: 220px;
+    /* padding: 20px; */
 }
+
+.casuta--micsorare{
+    width: 200px;
+}
+
+.aparitie--verticala{
+    height: 210px;
+    /* padding: 20px; */
+}
+
+.buton--schimbare{
+    background-color: gold;
+}
+
+.culoare{
+    background-color: red;
+}
+
+.casuta3Move--aparitie{
+    display: block;
+   
+}
+
