@@ -363,3 +363,25 @@ function urmatoarea(){
 setInterval(function(){
     urmatoarea();
 },5000);
+
+// ---------------------------------------------------
+
+const numeID = document.getElementById('numeID');
+
+numeID.addEventListener('focus', ()=>{
+    numeID.style.border = '3px solid blue';
+})
+
+numeID.addEventListener('blur', ()=>{
+    numeID.style.border = 'none';
+})
+
+const emailID = document.getElementById('emailID');
+
+emailID.addEventListener('focus', ()=>{
+    emailID.style.border = '3px solid blue';
+});
+
+emailID.addEventListener('blur', ()=>{
+    emailID.style.border = 'none';
+})
