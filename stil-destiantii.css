@@ -802,6 +802,12 @@ a{
     }
 }
 
+@media screen and (max-width:489px){
+    .contenedor3Move{
+        display: none;
+    }
+}
+
 /* ---- final media queries ---- */
 
 /* -------------- FINAL CONTENEDOR 3 ------------------- */
@@ -813,42 +819,65 @@ a{
 }
 
 .contenedor-all4{
-    background-color: beige;
+    background-color: aliceblue;
     padding: 50px 20px;
 }
 
 .contenedor-adaptare4{
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
 
     display: flex;
 }
 
 .contenedor4-text{
-    background-color: orange;
+    /* background-color: orange; */
     padding: 20px;
     width: 60%;
 }
 
 .contenedor4-text h1{
     font-size: 40px;
+    color: rgb(0, 145, 133);
 }
 
 .contenedor4-text h2{
     font-size: 30px;
     margin-top: -5px;
+    color: gold;
 }
 
 .labelText{
     font-size: 20px;
     font-weight: 500;
     display: block;
+    /* background-color: red; */
+}
+
+#corect_icon{
+    color: green;
+    display: none;
+}
+
+#incorect_icon{
+    color: red;
+    display: none;
+}
+
+#corect_icon2{
+    color: green;
+    display: none;
+}
+
+#incorect_icon2{
+    color: red;
+    display: none;
 }
 
 #numeID{
     margin-top: 60px;
     margin-left: 15px;
     outline: none;
-    border: none;
+    border: 1px solid gray;
     border-radius: 20px;
     height: 30px;
     width: 200px;
@@ -859,7 +888,7 @@ a{
     margin-top: 20px;
     margin-left: 15px;
     outline: none;
-    border: none;
+    border: 1px solid gray;
     border-radius: 20px;
     height: 30px;
     width: 270px;
@@ -876,6 +905,8 @@ a{
     height: 30px;
     width: 100px;
     cursor: pointer;
+    background-color: gold;
+    font-weight: 500;
 
 }
 
@@ -1131,6 +1162,11 @@ footer{
 
 .casuta3Move--aparitie{
     display: block;
+   
+}
+
+.casuta3Move--disparitie{
+    display: none;
    
 }
 

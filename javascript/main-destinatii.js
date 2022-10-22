@@ -298,29 +298,35 @@ let casute3 = document.querySelectorAll('.contenedor3-casuta');
 
 for(let i=0; i<casute3.length; i++){
     casute3[i].addEventListener('click', function(e){
-        if(e.target == avionID){
-            casuta3Move.classList.add('casuta3Move--aparitie');
-            casutaAvion.classList.add('casuta3Move--aparitie');
+        if(window.innerWidth > 490){
+            if(e.target == avionID){
+                casuta3Move.classList.add('casuta3Move--aparitie');
+                casutaAvion.classList.add('casuta3Move--aparitie');
 
-            casutaAutocar.classList.remove('casuta3Move--aparitie');
-            casutaTren.classList.remove('casuta3Move--aparitie');
+                casutaAutocar.classList.remove('casuta3Move--aparitie');
+                casutaTren.classList.remove('casuta3Move--aparitie');
 
+            }
+
+            else if(e.target == autocarID){
+                casutaAutocar.classList.add('casuta3Move--aparitie');
+                casuta3Move.classList.add('casuta3Move--aparitie');
+
+                casutaAvion.classList.remove('casuta3Move--aparitie');
+                casutaTren.classList.remove('casuta3Move--aparitie');
+            }
+
+            else if(e.target == trenID){
+                casutaTren.classList.add('casuta3Move--aparitie');
+                casuta3Move.classList.add('casuta3Move--aparitie');
+
+                casutaAvion.classList.remove('casuta3Move--aparitie');
+                casutaAutocar.classList.remove('casuta3Move--aparitie');
+            }
         }
 
-        else if(e.target == autocarID){
-            casutaAutocar.classList.add('casuta3Move--aparitie');
-            casuta3Move.classList.add('casuta3Move--aparitie');
-
-            casutaAvion.classList.remove('casuta3Move--aparitie');
-            casutaTren.classList.remove('casuta3Move--aparitie');
-        }
-
-        else if(e.target == trenID){
-            casutaTren.classList.add('casuta3Move--aparitie');
-            casuta3Move.classList.add('casuta3Move--aparitie');
-
-            casutaAvion.classList.remove('casuta3Move--aparitie');
-            casutaAutocar.classList.remove('casuta3Move--aparitie');
+        else{
+            casuta3Move.style.display = 'none';
         }
     })
 }
@@ -338,7 +344,7 @@ btnCasuta3Move.addEventListener('click', ()=>{
 // ------------------- Final contenedor 3 casute info -----------------------
 
 // ---------------- contenedor 3 galerie ----------------------------
-
+2
 const slider3 = document.getElementById('slider3');
 let poze3 = document.querySelectorAll('.casuta3-poza');
 let poze3Last = poze3[poze3.length - 1];
@@ -369,19 +375,55 @@ setInterval(function(){
 const numeID = document.getElementById('numeID');
 
 numeID.addEventListener('focus', ()=>{
-    numeID.style.border = '3px solid blue';
+    numeID.style.border = '3px solid rgb(0, 145, 133)';
 })
 
 numeID.addEventListener('blur', ()=>{
-    numeID.style.border = 'none';
+    numeID.style.border = '1px solid gray';
 })
 
 const emailID = document.getElementById('emailID');
 
 emailID.addEventListener('focus', ()=>{
-    emailID.style.border = '3px solid blue';
+    emailID.style.border = '3px solid rgb(0, 145, 133)';
 });
 
 emailID.addEventListener('blur', ()=>{
-    emailID.style.border = 'none';
+    emailID.style.border = '1px solid gray';
+})
+
+const btn_trimite = document.getElementById("btnID");
+
+const corect = document.getElementById("corect_icon");
+const incorect = document.getElementById("incorect_icon");
+
+const corect2 = document.getElementById("corect_icon2");
+const incorect2 = document.getElementById("incorect_icon2");
+
+btn_trimite.addEventListener("click", ()=>{
+    if(!isNaN(numeID.value)){
+        numeID.style.border = '2px solid red';
+        incorect.style.display = 'inline-block';
+        corect.style.display = 'none';
+    }
+
+    else if(isNaN(numeID.value)){
+        numeID.style.border = '2px solid green';
+        corect.style.display = 'inline-block';
+        incorect.style.display = 'none';
+    }
+
+    if(!isNaN(emailID.value)){
+        emailID.style.border = '2px solid red';
+        incorect2.style.display = 'inline-block';
+        corect2.style.display = 'none';
+    }
+
+    else if(isNaN(emailID.value)){
+        emailID.style.border = '2px solid green';
+        corect2.style.display = 'inline-block';
+        incorect2.style.display = 'none';
+    }
+
+    
 })
