@@ -372,58 +372,100 @@ setInterval(function(){
 
 // ---------------------------------------------------
 
-const numeID = document.getElementById('numeID');
+// const numeID = document.getElementById('numeID');
 
-numeID.addEventListener('focus', ()=>{
-    numeID.style.border = '3px solid rgb(0, 145, 133)';
-})
+// numeID.addEventListener('focus', ()=>{
+//     numeID.style.border = '3px solid rgb(0, 145, 133)';
+// })
 
-numeID.addEventListener('blur', ()=>{
-    numeID.style.border = '1px solid gray';
-})
+// numeID.addEventListener('blur', ()=>{
+//     numeID.style.border = '1px solid gray';
+// })
 
-const emailID = document.getElementById('emailID');
+// const emailID = document.getElementById('emailID');
 
-emailID.addEventListener('focus', ()=>{
-    emailID.style.border = '3px solid rgb(0, 145, 133)';
-});
+// emailID.addEventListener('focus', ()=>{
+//     emailID.style.border = '3px solid rgb(0, 145, 133)';
+// });
 
-emailID.addEventListener('blur', ()=>{
-    emailID.style.border = '1px solid gray';
-})
+// emailID.addEventListener('blur', ()=>{
+//     emailID.style.border = '1px solid gray';
+// })
 
-const btn_trimite = document.getElementById("btnID");
+// const btn_trimite = document.getElementById("btnID");
 
-const corect = document.getElementById("corect_icon");
-const incorect = document.getElementById("incorect_icon");
+// const corect = document.getElementById("corect_icon");
+// const incorect = document.getElementById("incorect_icon");
 
-const corect2 = document.getElementById("corect_icon2");
-const incorect2 = document.getElementById("incorect_icon2");
+// const corect2 = document.getElementById("corect_icon2");
+// const incorect2 = document.getElementById("incorect_icon2");
 
-btn_trimite.addEventListener("click", ()=>{
-    if(!isNaN(numeID.value)){
-        numeID.style.border = '2px solid red';
-        incorect.style.display = 'inline-block';
-        corect.style.display = 'none';
-    }
+// btn_trimite.addEventListener("click", ()=>{
+//     if(!isNaN(numeID.value)){
+//         numeID.style.border = '2px solid red';
+//         incorect.style.display = 'inline-block';
+//         corect.style.display = 'none';
+//     }
 
-    else if(isNaN(numeID.value)){
-        numeID.style.border = '2px solid green';
-        corect.style.display = 'inline-block';
-        incorect.style.display = 'none';
-    }
+//     else if(isNaN(numeID.value)){
+//         numeID.style.border = '2px solid green';
+//         corect.style.display = 'inline-block';
+//         incorect.style.display = 'none';
+//     }
 
-    if(!isNaN(emailID.value)){
-        emailID.style.border = '2px solid red';
-        incorect2.style.display = 'inline-block';
-        corect2.style.display = 'none';
-    }
+//     if(!isNaN(emailID.value)){
+//         emailID.style.border = '2px solid red';
+//         incorect2.style.display = 'inline-block';
+//         corect2.style.display = 'none';
+//     }
 
-    else if(isNaN(emailID.value)){
-        emailID.style.border = '2px solid green';
-        corect2.style.display = 'inline-block';
-        incorect2.style.display = 'none';
-    }
+//     else if(isNaN(emailID.value)){
+//         emailID.style.border = '2px solid green';
+//         corect2.style.display = 'inline-block';
+//         incorect2.style.display = 'none';
+//     }
 
     
+// })
+
+const expresii = {
+    nume: /^[a-zA-z]+[\s]+[a-zA-Z]{3,15}$/,
+    email: /^[a-z0-9\_]+@[a-z0-9-]+\.[a-z0-9]+$/
+}
+
+const formular = document.getElementById("formular");
+
+
+formular.addEventListener('submit', (e)=>{
+    e.preventDefault();
 })
+
+function validareFormular(e){
+    switch(e.target.name){
+        case 'nume':
+            if(expresii.nume.test(e.target.value)){
+                console.log('nume valid');
+            }
+
+            else{
+                console.log('nume invalid');
+            }
+            break;
+        
+        case 'email':
+            if(expresii.email.test(e.target.value))
+            console.log('email valid');
+
+            else{
+                console.log('email invalid');
+            }
+            break;
+    }
+}
+
+const inputs = document.querySelectorAll("#formular input");
+
+inputs.forEach((input) => {
+    input.addEventListener('keyup', validareFormular);
+    input.addEventListener('blur', validareFormular);
+});
