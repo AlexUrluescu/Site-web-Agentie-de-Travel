@@ -855,29 +855,23 @@ a{
 
 #corect_icon{
     color: green;
-    display: none;
 }
 
 #incorect_icon{
     color: red;
-    display: none;
 }
 
-#corect_icon2{
-    color: green;
-    display: none;
+.iconFormular{
+    opacity: 0;
 }
 
-#incorect_icon2{
-    color: red;
-    display: none;
-}
+
 
 #numeID{
     margin-top: 60px;
     margin-left: 15px;
     outline: none;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     border-radius: 20px;
     height: 30px;
     width: 200px;
@@ -888,7 +882,7 @@ a{
     margin-top: 20px;
     margin-left: 15px;
     outline: none;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     border-radius: 20px;
     height: 30px;
     width: 270px;
@@ -1168,5 +1162,17 @@ footer{
 .casuta3Move--disparitie{
     display: none;
    
+}
+
+.casuta--invalida{
+    border: red solid 3px;
+}
+
+.casuta--valida{
+    border: green solid 3px;
+}
+
+.icon--activ{
+    opacity: 1;
 }
 

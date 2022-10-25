@@ -428,12 +428,19 @@ setInterval(function(){
     
 // })
 
+// const casuta_nume = document.getElementById("numeID");
+// casuta_nume.classList.add('casuta--valida');
+
 const expresii = {
     nume: /^[a-zA-z]+[\s]+[a-zA-Z]{3,15}$/,
     email: /^[a-z0-9\_]+@[a-z0-9-]+\.[a-z0-9]+$/
 }
 
 const formular = document.getElementById("formular");
+const casuta_nume = document.getElementById("numeID");
+
+const iconCorect = document.getElementById("corect_icon");
+const iconIncorect = document.getElementById("incorect_icon");
 
 
 formular.addEventListener('submit', (e)=>{
@@ -445,10 +452,19 @@ function validareFormular(e){
         case 'nume':
             if(expresii.nume.test(e.target.value)){
                 console.log('nume valid');
+                
+                casuta_nume.classList.add('casuta--valida');
+                iconCorect.classList.add('icon--activ');
+                iconIncorect.classList.remove('icon--activ');
+               
             }
 
             else{
                 console.log('nume invalid');
+                
+                casuta_nume.classList.add('casuta--invalida');
+                iconIncorect.classList.add('icon--activ');
+                iconCorect.classList.remove('icon--activ');
             }
             break;
         
