@@ -438,9 +438,13 @@ const expresii = {
 
 const formular = document.getElementById("formular");
 const casuta_nume = document.getElementById("numeID");
+const casuta_email = document.getElementById("emailID");
 
 const iconCorect = document.getElementById("corect_icon");
 const iconIncorect = document.getElementById("incorect_icon");
+
+const iconCorect2 = document.getElementById("corect_icon2");
+const iconIncorect2 = document.getElementById("incorect_icon2");
 
 
 formular.addEventListener('submit', (e)=>{
@@ -454,6 +458,7 @@ function validareFormular(e){
                 console.log('nume valid');
                 
                 casuta_nume.classList.add('casuta--valida');
+                casuta_nume.classList.remove('casuta--invalida');
                 iconCorect.classList.add('icon--activ');
                 iconIncorect.classList.remove('icon--activ');
                
@@ -463,17 +468,28 @@ function validareFormular(e){
                 console.log('nume invalid');
                 
                 casuta_nume.classList.add('casuta--invalida');
+                casuta_nume.classList.remove('casuta--valida');
                 iconIncorect.classList.add('icon--activ');
                 iconCorect.classList.remove('icon--activ');
             }
             break;
         
         case 'email':
-            if(expresii.email.test(e.target.value))
-            console.log('email valid');
-
+            if(expresii.email.test(e.target.value)){
+                console.log('email valid');
+            
+                casuta_email.classList.add('casuta--valida');
+                casuta_email.classList.remove('casuta--invalida');
+                iconCorect2.classList.add('icon--activ');
+                iconIncorect2.classList.remove('icon--activ');
+            }
             else{
                 console.log('email invalid');
+
+                casuta_email.classList.add('casuta--invalida');
+                casuta_email.classList.remove('casuta--valida');
+                iconIncorect2.classList.add('icon--activ');
+                iconCorect2.classList.remove('icon--activ');
             }
             break;
     }

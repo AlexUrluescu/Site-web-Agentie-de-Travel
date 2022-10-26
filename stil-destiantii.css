@@ -861,6 +861,14 @@ a{
     color: red;
 }
 
+#corect_icon2{
+    color: green;
+}
+
+#incorect_icon2{
+    color: red;
+}
+
 .iconFormular{
     opacity: 0;
 }
