@@ -846,6 +846,44 @@ a{
     color: gold;
 }
 
+.casuta_nume_user{
+    /* background-color: gainsboro; */
+    margin-top: 60px;
+
+    display: flex; 
+}
+
+.casuta_nume_user_label{
+    /* background-color: antiquewhite; */
+    max-width: 300px;
+}
+
+.casuta_nume_user_icons{
+    /* background-color: red; */
+    margin-left: 8px;
+
+    position: relative;
+}
+
+.casuta_email_user{
+    /* background-color: antiquewhite; */
+    margin-top: 20px;
+
+    display: flex;
+}
+
+.casuta_email_user_label{
+    /* background-color: purple; */
+    max-width: 400px;
+}
+
+.casuta_email_user_icons{
+    /* background-color: aqua; */
+    margin-left: 8px;
+
+    position: relative;
+}
+
 .labelText{
     font-size: 20px;
     font-weight: 500;
@@ -853,21 +891,38 @@ a{
     /* background-color: red; */
 }
 
-#corect_icon{
+ #corect_icon{
     color: green;
+
+    position: absolute;
+    top: 8px;
+    left: 0px;
 }
 
-#incorect_icon{
+ #incorect_icon{
     color: red;
+
+    position: absolute;
+    top: 8px;
+    left: 0px;
 }
+
 
 #corect_icon2{
     color: green;
+
+    position: absolute;
+    top: 8px;
+    left: 0px;
 }
 
 #incorect_icon2{
     color: red;
-}
+
+    position: absolute;
+    top: 8px;
+    left: 0px;
+}  
 
 .iconFormular{
     opacity: 0;
@@ -876,7 +931,7 @@ a{
 
 
 #numeID{
-    margin-top: 60px;
+    /* margin-top: 60px; */
     margin-left: 15px;
     outline: none;
     /* border: 1px solid gray; */
@@ -887,7 +942,7 @@ a{
 }
 
 #emailID{
-    margin-top: 20px;
+
     margin-left: 15px;
     outline: none;
     /* border: 1px solid gray; */
@@ -959,6 +1014,14 @@ a{
         margin-left: 0;
     
     }
+
+    .casuta_email_user{
+        justify-content: center;
+    }
+
+    .casuta_nume_user{
+        justify-content: center;
+    }    
 }
 
 @media screen and (max-width:500px) {
@@ -989,6 +1052,34 @@ a{
     }
 }
 
+@media screen and (max-width:370px) {
+    .labelText{
+        font-size: 15px;
+    }
+
+    #numeID{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:354px){
+
+    .casuta_nume_user_icons{
+        display: none;
+    }
+
+    .casuta_nume_user_label{
+        width: 100%;
+    }
+
+    .casuta_email_user_icons{
+        display: none;
+    }
+
+    .casuta_email_user_label{
+        width: 100%;
+    }
+}
 /* --------------- SECTION 5 CONTINUT ---------------- */
 
 .contenedor5{

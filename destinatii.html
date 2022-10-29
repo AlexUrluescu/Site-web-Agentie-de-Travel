@@ -428,16 +428,32 @@
                     <h2>Gasim destinatia visurilor tale</h2>
 
                     <form action="" id="formular">
-                        <label class="labelText" for="nume">Nume
-                            <input type="text" name="nume" id="numeID" placeholder="Popescu George">
-                            <i id="corect_icon" class="fa-sharp fa-solid fa-circle-check iconFormular"></i>
-                            <i id="incorect_icon" class="fa-sharp fa-solid fa-circle-xmark iconFormular"></i>
-                        </label> 
-                        <label class="labelText" for="email">Email
-                            <input type="email" name="email" id="emailID" placeholder="george@gmail.com">
-                            <i id="corect_icon2" class="fa-sharp fa-solid fa-circle-check iconFormular"></i>
-                            <i id="incorect_icon2" class="fa-sharp fa-solid fa-circle-xmark iconFormular"></i>
-                        </label>
+                        <div class="casuta_nume_user">
+                            <div class="casuta_nume_user_label">
+                                <label class="labelText" for="nume">Nume
+                                    <input type="text" name="nume" id="numeID" placeholder="Popescu George">
+                                </label> 
+                            </div>
+                            
+                            <div class="casuta_nume_user_icons">
+                                <i id="corect_icon" class="fa-sharp fa-solid fa-circle-check iconFormular"></i>
+                                <i id="incorect_icon" class="fa-sharp fa-solid fa-circle-xmark iconFormular"></i>
+                            </div>
+                        </div>
+
+
+                        <div class="casuta_email_user">
+                            <div class="casuta_email_user_label">
+                                <label class="labelText" for="email">Email
+                                    <input type="email" name="email" id="emailID" placeholder="george@gmail.com">
+                                </label>
+                            </div>
+
+                            <div class="casuta_email_user_icons">
+                                <i id="corect_icon2" class="fa-sharp fa-solid fa-circle-check iconFormular"></i>
+                                <i id="incorect_icon2" class="fa-sharp fa-solid fa-circle-xmark iconFormular"></i>
+                            </div>   
+                        </div>
                         <input type="submit" value="Trimite" id="btnID">
                     <form action=""></form>
                 </div>
