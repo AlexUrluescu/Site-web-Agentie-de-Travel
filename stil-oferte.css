@@ -421,62 +421,80 @@ a{
 /* ---------------------- CONTENEDOR 2 ------------------------ */
 
 .contenedor2{
-    background-color: red;
+    /* background-color: red; */
 }
 
 .contenedor-all2{
-    background-color: blue;
+    background-color: rgba(0, 145, 133);
     padding: 50px 10px;
 }
 
 .contenedor-adaptare2{
-    background-color: pink;
+    /* background-color: pink; */
     max-width: 1200px;
     margin: auto;
 }
 
 .contenedor2-titlu{
-    background-color: red;
+    /* background-color: red; */
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: aliceblue;
 }
 
 .contenedor2-casute{
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
 
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
 }
 
 .casuta{
     background-color: purple;
-    width: 230px;
+    width: 280px;
+    height: 210px;
     cursor: pointer;
 
     position: relative;
     overflow: hidden;
+    
 }
 
-.casuta-poza{
+/* .casuta-poza{
     background-color: yellow;
-}
+    overflow: hidden;
+} */
 
 .casuta-poza img{
     width: 100%;
-    height: 100%;
+    height: 210px;
 }
 
 .casuta-descriere{
-    background-color: orange;
+    /* background-color: rgba(0, 145, 133, 0.611); */
+    background-color: rgba(240, 248, 255, 0.618);
     width: 100%;
     height: 130px;
     padding: 10px;
+    color: black;
+    font-weight: 600;
 
     position: absolute;
-    bottom: -90px;
+    /* bottom: -83px; */
+    bottom: -85px;
     left: 0;
 
     transition: all .4s;
-    /* overflow: hidden; */
+    overflow: hidden;
 
+}
+
+.casuta-descriere p{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
 }
 
 .casuta-descriere i{
@@ -497,18 +515,57 @@ a{
     display: none;
 }
 
-/* .casuta:hover .casuta-descriere{
-    bottom: 0;
-} */
+#btn_sageataJos2{
+    display: none;
+}
 
+#btn_sageataJos3{
+    display: none;
+}
+
+#btn_sageataJos4{
+    display: none;
+}
+
+
+/* ------ media queries ------  */
+
+@media screen and (max-width:880px) {
+    .contenedor2-titlu{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .casuta-descriere i{
+        transform: none;
+    
+        position: absolute;
+        top:15px;
+        right: 15px;
+    }
+}
 
 /* -------------------- FINAL CONTENEDOR 2 ------------------------- */
 
+/* ---------------------- CONTENEDOR 3 --------------------------- */
+
+.contenedor3{
+    height: 500px;
+    background-color: beige;
+}
+
+
+/* -------------------- FINAL CONTENEDOR 3 ------------------------- */
 .navigatie--aparitie{
     left: 0;
 }
 
 .casuta_descriere--aparitie{
-    bottom:0;
+    bottom:0px;
+}
+
+.casuta_descriere--culoare{
+    background-color: rgba(240, 248, 255, 0.897);
 }
 

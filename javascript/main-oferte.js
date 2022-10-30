@@ -50,6 +50,7 @@ let buton_sageata = document.querySelectorAll('.buton-sageata');
 let casuta_descriere = document.querySelectorAll('.casuta-descriere');
 let casuta = document.querySelectorAll('.casuta');
 let btn_sageataJos = document.getElementById("btn_sageataJos1");
+let butoane_sageataJos = document.querySelectorAll('.buton_sageataJos')
 
 for(let i=0; i < buton_sageata.length; i++){
     buton_sageata[i].addEventListener('click', (e)=>{
@@ -57,28 +58,73 @@ for(let i=0; i < buton_sageata.length; i++){
             case btn_sageata1:
                 // alert("merge");
                 casuta_descriere[0].classList.add("casuta_descriere--aparitie")
-                btn_sageataJos.style.display = 'inline-block';
+                casuta_descriere[0].classList.add("casuta_descriere--culoare")
+                butoane_sageataJos[0].style.display = 'inline-block';
                 buton_sageata[0].style.display = 'none';
                 break;
             
             case btn_sageata2:
-                alert("merge");
+                casuta_descriere[1].classList.add("casuta_descriere--aparitie");
+                casuta_descriere[1].classList.add("casuta_descriere--culoare");
+                butoane_sageataJos[1].style.display = 'inline-block';
+                buton_sageata[1].style.display = 'none';
                 break;
             
             case btn_sageata3:
-                
+                casuta_descriere[2].classList.add("casuta_descriere--aparitie");
+                casuta_descriere[2].classList.add("casuta_descriere--culoare");
+                butoane_sageataJos[2].style.display = 'inline-block';
+                buton_sageata[2].style.display = 'none';
                 break;
 
             case btn_sageata4:
-                
+                casuta_descriere[3].classList.add("casuta_descriere--aparitie");
+                casuta_descriere[3].classList.add("casuta_descriere--culoare");
+                butoane_sageataJos[3].style.display = 'inline-block';
+                buton_sageata[3].style.display = 'none';
                 break;
         }
     })
 }
 
-btn_sageataJos.addEventListener("click", ()=>{
-    casuta_descriere[0].classList.remove("casuta_descriere--aparitie")
-    btn_sageataJos.style.display = 'none';
-    buton_sageata[0].style.display = 'inline-block';
-})
+// btn_sageataJos.addEventListener("click", ()=>{
+//     casuta_descriere[0].classList.remove("casuta_descriere--aparitie")
+//     btn_sageataJos.style.display = 'none';
+//     buton_sageata[0].style.display = 'inline-block';
+// })
+
+for(let i=0; i < butoane_sageataJos.length; i++){
+    butoane_sageataJos[i].addEventListener('click', (e)=>{
+        switch(e.target){
+            case btn_sageataJos1:
+                casuta_descriere[0].classList.remove("casuta_descriere--aparitie");
+                casuta_descriere[0].classList.remove("casuta_descriere--culoare")
+                butoane_sageataJos[0].style.display = 'none';
+                buton_sageata[0].style.display = 'inline-block';
+                break;
+
+            case btn_sageataJos2:
+                casuta_descriere[1].classList.remove("casuta_descriere--aparitie");
+                casuta_descriere[1].classList.remove("casuta_descriere--culoare")
+                butoane_sageataJos[1].style.display = 'none';
+                buton_sageata[1].style.display = 'inline-block';
+                break;
+
+            case btn_sageataJos3:
+                casuta_descriere[2].classList.remove("casuta_descriere--aparitie");
+                casuta_descriere[2].classList.remove("casuta_descriere--culoare")
+                butoane_sageataJos[2].style.display = 'none';
+                buton_sageata[2].style.display = 'inline-block';
+                break;
+
+            case btn_sageataJos4:
+                casuta_descriere[3].classList.remove("casuta_descriere--aparitie");
+                casuta_descriere[3].classList.remove("casuta_descriere--culoare")
+                butoane_sageataJos[3].style.display = 'none';
+                buton_sageata[3].style.display = 'inline-block';
+                break;
+        }
+       
+    })
+}
 
