@@ -450,7 +450,7 @@ a{
     /* background-color: red; */
     font-size: 30px;
     margin-bottom: 20px;
-    color: rgba(0, 145, 133);
+    color: rgb(0, 99, 142);
 }
 
 .contenedor2-casute{
@@ -562,13 +562,13 @@ a{
 /* ---------------------- CONTENEDOR 3 --------------------------- */
 
 .contenedor3{
-    background-color: beige;
+    /* background-color: beige; */
     margin-top: 20px;
 }
 
 .contenedor-all3{
-    background-color: aquamarine;
-    padding: 70px 20px;
+    /* background-color: aquamarine; */
+    padding: 50px 20px;
 }
 
 .contenedor-adaptare3{
@@ -578,38 +578,45 @@ a{
 }
 
 .contenedor3-titlu{
-    background-color: red;
-    color: white;
+    /* background-color: red; */
+    color: rgb(0, 99, 142);
     margin-bottom: 20px;
+    font-size: 23px;
 }
 
-.contenedor3-casute{
+/* .contenedor3-casute{
     background-color: blue;
-}
+} */
 
 .contenedor3-casuta1{
-    background-color: plum;
+    /* background-color: plum; */
 
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-around;
 }
 
 .speciala{
-    background-color: aqua;
+    /* background-color: aqua; */
     margin-top: 20px;
 }
 
 .ctn3-casuta1{
     width: 350px;
-    background-color: red;
+    height: 250px;
+    /* background-color: red; */
+    cursor: pointer;
 
     position: relative;
+    overflow: hidden;
+    transition: all .4s;
 }
 
-.ctn3-casuta1-poza{
+/* .ctn3-casuta1-poza{
     background-color: aquamarine;
 
-}
+} */
 
 .ctn3-casuta1-poza img{
     width: 100%;
@@ -617,12 +624,111 @@ a{
 }
 
 .ctn3-casuta1-descriere{
-    background-color: antiquewhite;
+    background-color: rgba(0, 0, 0, 0.496);
     width: 100%;
+    padding: 10px;
+    color: white;
 
     position: absolute;
-    bottom: 0;
+    bottom: -45px;
     left: 0;
+
+    transition: all .4s;
+}
+
+.ctn3-casuta1-descriere h2{
+    font-size: 18px;
+}
+
+.ctn3-casuta1-descriere input{
+    padding: 7px 20px;
+    font-weight: 500;
+    background-color: gold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: all .4s;
+}
+
+.casuta-input{
+    /* background-color: red; */
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctn3-casuta1-descriere input:hover{
+    background-color: rgb(221, 188, 0);
+}
+
+.ctn3-casuta1:hover .ctn3-casuta1-descriere{
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.719);
+}
+
+
+/* ------ media queries -------  */
+
+@media screen and (max-width:1140px) {
+    .ctn3-casuta1{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .ctn3-casuta1{
+        width: 260px;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .ctn3-casuta1{
+        width: 420px;
+        height: 300px;
+    }
+
+    .ctn3-casuta1-poza img{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:770px) {
+    .ctn3-casuta1-descriere{
+        background-color: rgba(0, 0, 0, 0.496);
+        width: 100%;
+        padding: 10px;
+        color: white;
+    
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+    
+        transition: all .4s;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .ctn3-casuta1{
+        width: 350px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:470px) {
+    .ctn3-casuta1-descriere input{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .ctn3-casuta1{
+        width: 300px;
+        height: 250px;
+    }
 }
 
 
