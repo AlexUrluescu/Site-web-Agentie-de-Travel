@@ -9,6 +9,8 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
+
+    scroll-behavior: smooth;
 }
 
 body{
@@ -115,6 +117,11 @@ a{
 
 #locatie{
     color: gold;
+    height: 80px;
+}
+
+#element{
+    height: 80px;
 }
 
 
@@ -420,12 +427,16 @@ a{
 
 /* ---------------------- CONTENEDOR 2 ------------------------ */
 
-.contenedor2{
-    /* background-color: red; */
-}
+/* .contenedor2{
+    background-color: red;
+} */
 
 .contenedor-all2{
-    background-color: rgba(0, 145, 133);
+    /* background-color: rgba(0, 145, 133); */
+    /* background-color: rgb(233, 233, 233); */
+    background-color: aliceblue;
+    border-top: 3px solid rgb(192, 192, 192);
+    border-bottom: 3px solid rgb(192, 192, 192);
     padding: 50px 10px;
 }
 
@@ -439,7 +450,7 @@ a{
     /* background-color: red; */
     font-size: 30px;
     margin-bottom: 20px;
-    color: aliceblue;
+    color: rgba(0, 145, 133);
 }
 
 .contenedor2-casute{
@@ -551,9 +562,69 @@ a{
 /* ---------------------- CONTENEDOR 3 --------------------------- */
 
 .contenedor3{
-    height: 500px;
     background-color: beige;
+    margin-top: 20px;
 }
+
+.contenedor-all3{
+    background-color: aquamarine;
+    padding: 70px 20px;
+}
+
+.contenedor-adaptare3{
+    background-color: aliceblue;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contenedor3-titlu{
+    background-color: red;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contenedor3-casute{
+    background-color: blue;
+}
+
+.contenedor3-casuta1{
+    background-color: plum;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.speciala{
+    background-color: aqua;
+    margin-top: 20px;
+}
+
+.ctn3-casuta1{
+    width: 350px;
+    background-color: red;
+
+    position: relative;
+}
+
+.ctn3-casuta1-poza{
+    background-color: aquamarine;
+
+}
+
+.ctn3-casuta1-poza img{
+    width: 100%;
+    height: 250px;
+}
+
+.ctn3-casuta1-descriere{
+    background-color: antiquewhite;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 
 
 /* -------------------- FINAL CONTENEDOR 3 ------------------------- */
