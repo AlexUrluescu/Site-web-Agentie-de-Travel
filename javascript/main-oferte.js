@@ -87,11 +87,7 @@ for(let i=0; i < buton_sageata.length; i++){
     })
 }
 
-// btn_sageataJos.addEventListener("click", ()=>{
-//     casuta_descriere[0].classList.remove("casuta_descriere--aparitie")
-//     btn_sageataJos.style.display = 'none';
-//     buton_sageata[0].style.display = 'inline-block';
-// })
+
 
 for(let i=0; i < butoane_sageataJos.length; i++){
     butoane_sageataJos[i].addEventListener('click', (e)=>{
@@ -127,4 +123,37 @@ for(let i=0; i < butoane_sageataJos.length; i++){
        
     })
 }
+
+// ------------------------------------------------------
+
+const slider_ctn4 = document.getElementById('slider4');
+let poze_ctn4 = document.querySelectorAll('.casuta4-poza');
+let poze_ctn4Last = poze_ctn4[poze_ctn4.length - 1];
+// let titlu = querySelector(".contenedor4-titlu");
+// titlu.addEventListener('click', next2());
+
+function urmatoarea(){
+    const slider_ctn4 = document.getElementById('slider4');
+    let poze_ctn4First = document.querySelectorAll('.casuta4-poza')[0];
+
+    slider_ctn4.style.marginLeft = '-200%';
+    slider_ctn4.style.transition = 'all .9s';
+
+    setTimeout(function(){
+        slider_ctn4.style.marginLeft = '-100%';
+        slider_ctn4.style.transition = 'none';
+        slider_ctn4.insertAdjacentElement("beforeend", poze_ctn4First)
+    }, 900)
+
+    //  slider_ctn4.style.marginLeft = '0%';
+}
+
+setInterval(function(){
+    urmatoarea();
+}, 5000)
+
+
+// --------------------------------------------------------
+
+
 
