@@ -753,6 +753,9 @@ a{
 
 .contenedor4-titlu{
     background-color: pink;
+    color: rgb(0, 99, 142);
+    font-size: 23px;
+    margin-bottom: 10px;
 }
 
 .contenedor4-casuta{
@@ -815,6 +818,79 @@ a{
     background-color: rgba(255, 255, 255, 0.847);
 }
 
+/* ------- media queries ----- */
+
+@media screen and (max-width:960px) {
+    .contenedor4-casuta{
+        display: none;
+    }
+}
+
+/* ------------------------------- */
+
+.contenedor4-ski{
+    background-color: gold;
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.casuta-ski{
+    background-color: blueviolet;
+    width: 270px;
+}
+
+.casuta-ski-poza{
+    background-color: greenyellow;
+}
+
+.casuta-ski-poza img{
+    width: 100%;
+    height: 100%;
+}
+
+.casuta-ski-descriere{
+    background-color: paleturquoise;
+}
+
+.casuta-descriere-text{
+    background-color: beige;
+    padding: 3px;
+}
+
+.casuta-descriere-text i{
+    font-size: 12px;
+}
+
+.casuta-descriere-text p{
+    display: inline-block;
+    font-size: 13px;
+}
+
+.casuta-descriere-text h3{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.casuta-descriere-pret{
+    background-color: brown;
+    padding: 3px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.casuta-descriere-pret p{
+    font-size: 15px;
+}
+
+.casuta-descriere-pret span{
+    font-size: 20px;
+    font-weight: 500;
+
+}
 
 /* -------------------- FINAL CONTENEDOR 4 ------------------------- */
 .navigatie--aparitie{

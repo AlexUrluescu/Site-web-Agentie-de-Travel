@@ -150,7 +150,7 @@ function urmatoarea(){
 
 setInterval(function(){
     urmatoarea();
-}, 5000)
+}, 5000);
 
 
 // --------------------------------------------------------
