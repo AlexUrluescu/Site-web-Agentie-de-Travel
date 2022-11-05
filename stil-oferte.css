@@ -736,37 +736,37 @@ a{
 
 /* ---------------------- CONTENEDOR 4 ----------------------------- */
 
-.contenedor4{
+/* .contenedor4{
     background-color: red;
-}
+} */
 
 .contenedor-all4{
-    background-color: beige;
+    /* background-color: beige; */
     padding: 50px 20px;
 }
 
 .contenedor-adaptare4{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     max-width: 1200px;
     margin: auto;
 }
 
 .contenedor4-titlu{
-    background-color: pink;
+    /* background-color: pink; */
     color: rgb(0, 99, 142);
     font-size: 23px;
     margin-bottom: 10px;
 }
 
 .contenedor4-casuta{
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
 
     overflow: hidden;
 
 }
 
 .ctn4-slider{
-    background-color: purple;
+    /* background-color: purple; */
     height: 100%;
     width: 300%;
     margin-left: -100%;
@@ -824,38 +824,69 @@ a{
     .contenedor4-casuta{
         display: none;
     }
+
+    .contenedor4-titlu{
+        display: none;
+    }
 }
 
 /* ------------------------------- */
+.contenedor4-ski-titlu{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: rgb(0, 99, 142);
+    font-size: 23px;
+}
 
 .contenedor4-ski{
-    background-color: gold;
-    margin-top: 30px;
+    /* background-color: gold; */
 
     display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
     justify-content: space-around;
 }
 
 .casuta-ski{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     width: 270px;
+    cursor: pointer;
+    
 }
 
 .casuta-ski-poza{
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
+    position: relative;
 }
 
-.casuta-ski-poza img{
+.imagine-ski{
     width: 100%;
     height: 100%;
 }
 
+
+.icon_ski{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.351);
+    padding: 5px;
+    transition: all .4s;
+    z-index: 100;
+}
+
+.casuta-ski:hover .icon_ski{
+    background-color: rgba(0, 0, 0, 0.688);
+}
+
 .casuta-ski-descriere{
-    background-color: paleturquoise;
+    /* background-color: paleturquoise; */
 }
 
 .casuta-descriere-text{
-    background-color: beige;
+    /* background-color: beige; */
     padding: 3px;
 }
 
@@ -874,8 +905,9 @@ a{
 }
 
 .casuta-descriere-pret{
-    background-color: brown;
+    /* background-color: brown; */
     padding: 3px;
+    border-bottom: 1px solid black;
 
     display: flex;
     flex-direction: column;
@@ -883,12 +915,13 @@ a{
 }
 
 .casuta-descriere-pret p{
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .casuta-descriere-pret span{
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
+    color: purple;
 
 }
 
